@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh; 
+  background: url("img/blackimg.jpg") no-repeat center center/cover;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent so text is readable */
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  position: absolute; /* float on top of image */
+  position: fixed;
+  top: 0;
+  width: 60%;
+  margin-left: 20%;
+  padding: 10px 20px;
+  z-index: 2;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.herop {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: monospace; /* typewriter style */
+  white-space: nowrap; /* keep text on one line */
+  overflow: hidden; /* hides text until typed */
+  width: 0; /* hidden at start */
+  animation: typing 3s steps(22, end) forwards;
+}
+
+/* typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 22ch } /* adjust to length of text */
+}
+
+
+
+
+.logo{
+  height: 130px;
+  width: 170px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+
+.header, .nav a {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;  
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 60px;
+  padding-right: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav :hover {
+  text-decoration: none;
+  color: rgb(180, 6, 6);
+}
+
+body{
+    background-color:#afaeae ;
+}
+
+.gallery {
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 100px auto;   /* centers gallery */
+  padding: 40px 20px 20px; 
+  position: relative;
+  bottom: 170px; 
+  gap: 15px; 
+}
+
+.gallerycontent {
+  border: 1px solid #ccc;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallerycontent:hover {
+  transform: scale(1.05);  /* grows by 5% */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* adds a nice shadow */
+}
+
+img {
+  width: 300px;
+  height: 200px;
+}
+
+
+
+footer{
+    height: 320px; 
+    background-color:hsl(0, 0%, 5%); 
+    color: white; 
+    margin-top: 100px; 
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.footer-box{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px; 
+}
+
+.footer-content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.footer-content2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-content3{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-bottom{
+    text-align: center;
+
+    padding-top: 5px;
+}
+
+ul{
+    list-style: none;
+    cursor: pointer;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+ul li:hover{
+  color: rgb(180, 6, 6);
+}
+
+
+/* ---- Large desktops / wide screens (<=1200px) ---- */
+@media (max-width: 1200px) {
+  .logo { height: 110px; width: 145px; }
+  .nav { gap: 40px; padding-right: 16px; }
+  .gallerycontent { width: 280px; }
+  .hero-text { font-size: 28px; }
+}
+
+/* ---- Laptops (<=992px) ---- */
+@media (max-width: 992px) {
+  nav {
+    width: 100%;          
+    margin-left: 0;       
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 10px 16px;
+  }
+
+  .logo { height: 100px; width: 130px; }
+  .nav { gap: 28px; flex-wrap: nowrap; justify-content: center; overflow-x: auto; }
+
+  /* ✅ Gallery: switch to grid for 2 columns */
+  .gallery {
+    width: 90%;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    justify-items: center;
+  }
+
+  .gallerycontent {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero { height: 50vh; }
+  .hero-text { font-size: 24px; }
+}
+
+/* ---- Tablets / large phones (<=768px) ---- */
+@media (max-width: 768px) {
+  .logo { height: 85px; width: 110px; }
+  .nav { gap: 20px; justify-content: space-between; }
+  .nav a { font-size: 18px; white-space: nowrap; }
+  
+  /* ✅ Gallery: 1 column */
+  .gallery {
+    width: 90%;
+    margin: 60px auto;
+    grid-template-columns: 1fr;
+  }
+  .gallerycontent { max-width: 420px; }
+
+  .hero { height: 45vh; }
+  .hero-text { font-size: 20px; padding: 0 12px; }
+
+  footer { padding: 30px 16px; height: auto; }
+  .footer-box { flex-direction: column; gap: 20px; align-items: center; }
+}
+
+/* ---- Small phones (<=576px) ---- */
+@media (max-width: 576px) {
+  .logo { height: 70px; width: 90px; }
+  .nav { gap: 14px; justify-content: flex-start; overflow-x: auto; }
+  .nav a { font-size: 15px; padding: 6px 8px; }
+
+  .hero { height: 40vh; }
+  .hero-text { font-size: 18px; }
+
+  .gallery { width: 95%; padding: 20px; gap: 14px; }
+  .gallerycontent { width: 100%; }
+
+  footer { padding: 20px 12px; }
+  .footer-box { flex-direction: column; gap: 16px; text-align: center; }
+}
+
+/* ---- Very small phones (<=420px) ---- */
+@media (max-width: 420px) {
+  .logo { height: 60px; width: 75px; }
+  .nav a { font-size: 14px; }
+  .hero { height: 36vh; }
+  .hero-text { font-size: 16px; }
+  .gallery { gap: 12px; }
+  footer { padding: 18px 10px; }
+  .footer-box { gap: 12px; }
+}
+
+/* ---- Extra small devices (<=360px) ---- */
+@media (max-width: 360px) {
+  .logo { height: 52px; width: 70px; }
+  .nav a { font-size: 13px; }
+  .hero { height: 32vh; }
+  .hero-text { font-size: 15px; }
+  .gallery { width: 100%; padding: 12px; }
+  footer { padding: 16px 8px; }
+}
+

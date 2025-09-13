@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 11vh;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  z-index: 1000; 
+}
+
+
+.logo{
+  height: 130px;
+  width: 170px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.cart {
+  height: 40px;          
+  width: 40px;
+  object-fit: contain;   
+  flex-shrink: 0;        
+}
+
+.nav a {
+  display: flex;         
+  align-items: center;   
+  text-decoration: none;
+  color: white;
+  font-size: 20px;           
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;   
+  gap: 40px;             
+  padding-right: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav :hover {
+  text-decoration: none;
+  color: rgb(180, 6, 6);
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    background: #f7fcfd;
+    gap: 40px;
+    padding: 10px 0px;
+
+}
+
+h1{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: rgb(213, 1, 1);
+}
+
+.choose1{
+    display: flex;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    background: rgb(180, 6, 6);
+}
+
+
+#list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    list-style: none;
+
+}
+
+.choose{
+    display: flex;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+.choose:hover{
+    background:  rgb(180, 6, 6);
+    border: none;
+}
+
+.menu1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 20px; 
+  gap: 15px; 
+  background-color: #ccc;
+}
+
+.menucontent {
+  border: 1px solid #ccc;
+  box-shadow: 0px 5px 5px 0px hsl(0, 0%, 5%);
+  width: 350px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menucontent:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
+}
+
+img {
+  margin-top: 20px;
+  width: 320px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+h2{
+    font-size: 25px;
+    text-align: center;
+}
+
+p{
+    font-size: 25px;
+    font-weight: 550;
+}
+
+
+.price-cart{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+#cart{
+    border: none;
+    width: 110px;
+    height: 40px;
+    color: white;
+    background: rgb(180, 6, 6);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#cart:hover{
+    background: black;
+}
+
+
+footer {
+  background-color: hsl(0, 0%, 5%);
+  color: white;
+  width: 100%;
+  padding: 50px 20px;      
+  box-sizing: border-box;
+}
+
+
+.footer-box{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px; 
+}
+
+.footer-content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.footer-content2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-content3{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 400;
+}
+
+.footer-bottom{
+    text-align: center;
+    padding-top: 5px;
+}
+
+.rights{
+    font-size: 15px;
+
+}
+
+.footul{
+    list-style: none;
+    cursor: pointer;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footul .footlist:hover{
+  color: rgb(213, 1, 1);
+}
+
+
+
+
+/* make images behave nicely everywhere */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* ---- Large desktops / wide screens (<=1200px) ---- */
+@media (max-width: 1200px) {
+  .logo { height: 110px; width: 145px; }
+  .nav { gap: 32px; padding-right: 16px; }
+  #list { gap: 80px; }
+  .menucontent { width: 320px; }
+  .menu1 { padding: 36px 18px; }
+  .footer-box { padding: 40px 16px; }
+}
+
+/* ---- Laptop / smaller desktops (<=992px) ---- */
+@media (max-width: 992px) {
+  nav { padding: 10px 16px; }
+  .logo { height: 100px; width: 130px; }
+
+  .nav { gap: 28px; }
+
+  .menu1 {
+    gap: 18px;
+    padding: 32px 16px;
+  }
+  .menucontent {
+    width: calc(50% - 18px);   
+    box-sizing: border-box;
+  }
+
+  #list { gap: 60px; }
+  h1 { font-size: 34px; }
+  h2 { font-size: 22px; }
+  p { font-size: 20px;
+      text-align: center;
+}
+
+  .price-cart { gap: 60px; }
+  #cart { width: auto; padding: 10px 12px; }
+  .footer-box { gap: 24px; }
+}
+
+/* ---- Tablet / large phones (<=768px) ---- */
+@media (max-width: 768px) {
+  nav { height: auto; align-items: center; padding: 10px; }
+  .logo { height: 90px; width: 110px; margin-bottom: 0; }
+
+  .nav {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .nav a { font-size: 18px; padding: 4px 6px; }
+
+  #list {
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .menu1 { padding: 28px 14px; }
+  .menucontent { width: calc(50% - 15px); }
+
+  h1 { font-size: 30px; }
+  h2 { font-size: 20px; }
+  p { font-size: 16px; }
+
+  .price-cart { gap: 28px; align-items: center; flex-wrap: wrap; }
+  #cart { padding: 9px 12px; }
+
+  .footer-box { gap: 18px; }
+}
+
+/* ---- Small phones / Surface Duo single screen (<=576px) ---- */
+@media (max-width: 576px) {
+  nav { padding: 8px 12px; }
+  .logo { height: 70px; width: 95px; }
+
+  .nav {
+    gap: 2px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav a {
+    font-size: 16px;
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
+
+  .cart {
+    height: 36px;   
+    width: 36px;
+    flex-shrink: 0; 
+  }
+
+  #list { 
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 8px 0; 
+  }
+
+  .menu1 { padding: 22px 12px; }
+  .menucontent { width: 100%; max-width: 420px; }
+  .menucontent img { width: 100%; height: auto; }
+
+  h1 { font-size: 26px; }
+  h2 { font-size: 18px; }
+  p { font-size: 15px; }
+  #cart { width: auto; padding: 9px 14px; }
+
+  footer { padding: 30px 16px; }
+  .footer-box { flex-direction: column; align-items: center; gap: 16px; }
+  .footer-content, .footer-content2, .footer-content3 { min-width: 0; text-align: center; padding: 6px 0; }
+}
+
+/* ---- Very small phones (<=420px) ---- */
+@media (max-width: 420px) {
+  .logo { height: 60px; width: 80px; }
+  .nav { gap: 10px; }
+  .nav a { font-size: 14px; padding: 5px 6px; }
+
+  .cart {
+    height: 32px;  
+    width: 32px;
+  }
+
+  #list { gap: 12px; }
+  h1 { font-size: 22px; }
+  h2 { font-size: 16px; }
+  p { font-size: 14px; }
+
+  .menucontent { padding: 12px; border-radius: 8px; }
+  .menucontent img { border-radius: 8px; }
+
+  .price-cart { flex-direction: column; gap: 12px; align-items: stretch; }
+  #cart { width: 100%; max-width: 260px; margin: 0 auto; }
+}
+
+/* ---- Extra small devices (<=360px) ---- */
+@media (max-width: 360px) {
+  .logo { height: 52px; width: 72px; }
+  .nav a { font-size: 13px; }
+  h1 { font-size: 20px; }
+  p { font-size: 13px; }
+  .menucontent { width: 95%; padding: 10px; }
+  .footer-box { padding: 12px; gap: 12px; }
+}
