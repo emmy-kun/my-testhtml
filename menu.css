@@ -328,15 +328,25 @@ img {
 
 /* ---- Small phones / Surface Duo single screen (<=576px) ---- */
 @media (max-width: 576px) {
-  nav { padding: 8px 12px; }
-  .logo { height: 70px; width: 95px; }
+  nav { padding: 8px 12px;
+         height: 11vh;
+  
+  }
+    .logo {
+    height: 80px;
+    width: 300px;
+  }
+
+  .res-name {
+    margin-bottom: 80px;
+    
+  }
 
   .nav {
     gap: 2px;
     justify-content: space-between;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    height: auto;
   }
 
   .nav a {

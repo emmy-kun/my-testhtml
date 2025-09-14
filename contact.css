@@ -281,18 +281,31 @@ ul li:hover{
   }
 
   .contact-p{
-    font-size: 30px;
-    font-weight: 400
+    font-size: 25px;
+    font-weight: 400;
   }
 
   .header, .nav a {
     font-size: 14px;
   }
 
+  #contact-us {
+    width: 100%;
+    height: auto;       /* let it expand naturally */
+    padding: 12px;
+  }
+
+ 
   .logo {
     height: 65px;
     width: 90px;
   }
+
+  .res-name {
+    margin-bottom: 30px;
+  }
+
+  
 
   footer { padding: 20px 12px; }
   .footer-box { flex-direction: column; gap: 16px; text-align: center; }

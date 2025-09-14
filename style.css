@@ -400,50 +400,52 @@ ul li:hover{
   }
 }
 
-/* Small screens (Phones) */
+/* Small phones (<=480px) */
 @media (max-width: 480px) {
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-    gap: 35px;
-  }
-
-  .logo {
-    margin: 0;
-    align-self: flex-start; /* keeps logo in left corner */
-    height: 50px;
-    width: 65px;
-  }
-
-
   .nav {
-    flex-wrap: nowrap;        
-    gap: 10px;          
-    justify-content: center;  
-    overflow-x: auto;          
-    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: row;   /*  keep items in one row */
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: nowrap;     /*  prevent wrapping to next line */
+    gap: 8px;              /*  tighter spacing */
+    overflow-x: auto;      /*  allow horizontal scroll if too many */
+    width: 100%;
   }
 
   .nav a {
-    font-size: 14px;
-    white-space: nowrap;       
-    padding: 4px 6px;
+    font-size: 13px;       /*  slightly smaller text */
+    white-space: nowrap;   /* keep each link on one line */
   }
 
+  .logo {
+    height: 80px;
+    width: 100px;
+  }
 
+  .res-name {
+    margin-bottom: 30px;
+  }
 
-  .destination {
-    overflow-x: hidden;
-    overflow-y: hidden;
+  .contact-p {
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  footer { padding: 20px 12px; }
+  .footer-box { flex-direction: column; gap: 16px; text-align: center; }
+
+  .dest {
+    font-size: 30px;
   }
 
   .body {
     font-size: 1.8em;
     text-align: center;
     padding: 20px;
+    overflow-x: hidden;
   }
+
 
   /* food images & text stacked vertically */
   .display {
@@ -452,43 +454,16 @@ ul li:hover{
     text-align: center;
     gap: 20px;
   }
-
-  @media (max-width: 480px) {
-  .display {
-    flex-direction: column;
-    align-items: center;   /* keeps food images + text centered */
-    gap: 20px;
-  }
-
-  .display .card {
-    width: 90%;           /* images resize nicely */
-    max-width: 420px;
-  }
-
-  .foodp {
-    text-align: center;
-  }
-
-  .footer-box {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .footer-content,
-  .footer-content2,
-  .footer-content3 {
-    width: 100%;
-    min-width: 0;
-  }
 }
-}
+
+
+
 
 
 /* Surface Duo (single screen, portrait/landscape) */
 @media (max-width: 720px) {
   nav {
+    height: 10vh;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;

@@ -248,40 +248,61 @@ ul li:hover{
   .footer-box { flex-direction: column; gap: 20px; align-items: center; }
 }
 
-/* ---- Small phones (<=576px) ---- */
-@media (max-width: 576px) {
-  .logo { height: 70px; width: 90px; }
-  .nav { gap: 14px; justify-content: flex-start; overflow-x: auto; }
-  .nav a { font-size: 15px; padding: 6px 8px; }
+/* Small phones (<=480px) */
+@media (max-width: 480px) {
+  .nav {
+    gap: 10px;             /* very tight spacing */
+    flex-wrap: wrap;       /* if too many links, wrap into 2 lines */
+    justify-content: center;
+  }
 
-  .hero { height: 40vh; }
-  .hero-text { font-size: 18px; }
+  nav{
+    height: 10vh;
+  }
 
-  .gallery { width: 95%; padding: 20px; gap: 14px; }
-  .gallerycontent { width: 100%; }
+  .contact-p{
+    font-size: 30px;
+    font-weight: 400;
+  }
 
-  footer { padding: 20px 12px; }
+  .gallery{
+    margin-bottom: 0%;
+  }
+
+  .header, .nav a {
+    font-size: 14px;
+  }
+  .hero { height: 32vh;
+            }
+
+  .hero-text { font-size: 13px; padding: 0 6px;
+          }
+
+  .herop{
+    font-size: 20px;
+  }
+
+  .logo {
+    height: 65px;
+    width: 90px;
+  }
+
+  .res-name {
+    margin-bottom: 40px;
+  }
+
+  footer { padding: 20px 12px; margin-top: 0%; }
   .footer-box { flex-direction: column; gap: 16px; text-align: center; }
 }
 
-/* ---- Very small phones (<=420px) ---- */
-@media (max-width: 420px) {
-  .logo { height: 60px; width: 75px; }
-  .nav a { font-size: 14px; }
-  .hero { height: 36vh; }
-  .hero-text { font-size: 16px; }
-  .gallery { gap: 12px; }
-  footer { padding: 18px 10px; }
-  .footer-box { gap: 12px; }
-}
 
 /* ---- Extra small devices (<=360px) ---- */
 @media (max-width: 360px) {
   .logo { height: 52px; width: 70px; }
   .nav a { font-size: 13px; }
-  .hero { height: 32vh; }
-  .hero-text { font-size: 15px; }
+  .hero { height: 32vh; margin-top: 20px}
+  .hero-text { font-size: 13px;}
   .gallery { width: 100%; padding: 12px; }
-  footer { padding: 16px 8px; }
+  footer { padding: 16px 8px;}
 }
 
